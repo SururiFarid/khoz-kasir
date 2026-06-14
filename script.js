@@ -213,12 +213,19 @@ function selesaiDanCetak(){
     <html>
     <head>
     <style>
-        body{
-            font-family:monospace;
-            font-size:13px;
-            padding:15px;
-            text-transform:uppercase;
-        }
+        @page{
+            size:58mm auto;
+            margin:0;
+         }
+
+         body{
+             width:58mm;
+             margin:0;
+             padding:2mm;
+             font-family:monospace;
+             font-size:11px;
+             text-transform:uppercase;
+         }
 
         h2{
             text-align:center;
