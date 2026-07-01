@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasir Khoz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>TOKO KHOZ</h1>
+        <h2>Jl. Jatiwayang, Pacitan, Ngunut, Tulungagung</h2>
+        <div id="datetime"></div>
+
+        <button id="themeToggle" class="theme-btn">🌙 Mode Gelap</button>
+
+        <button class="btn-logout" onclick="logout()">Logout</button>
+      </div>
+
+      <nav class="menu-header">
+        <a href="index.html" class="menu-item active"> 🛒 Kasir </a>
+
+        <a href="riwayat.html" class="menu-item"> 📋 Riwayat </a>
+      </nav>
+
+      <div class="card">
+        <h2>Input Barang</h2>
+
+        <div class="form-grid">
+          <input type="text" id="namaKasir" readonly placeholder="Nama Kasir" />
+
+          <input type="text" id="namaBarang" placeholder="Nama Barang" />
+          <input type="number" id="hargaBarang" placeholder="Harga" />
+          <input type="number" id="qtyBarang" placeholder="Qty" />
+          <button class="btn-add" onclick="tambahBarang()">Tambah</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Keranjang</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Qty</th>
+              <th>Harga</th>
+              <th>Total</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+
+        <div class="summary">
+          <h3>Total: Rp <span id="totalBelanja">0</span></h3>
+
+          <input
+            type="number"
+            id="uangDibayar"
+            placeholder="Uang Dibayar"
+            oninput="hitungKembalian()"
+          />
+
+          <input
+            type="text"
+            id="uangKembalian"
+            placeholder="Kembalian"
+            readonly
+          />
+
+          <button class="btn-print" onclick="selesaiDanCetak()">
+            Selesai & Cetak Struk
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
