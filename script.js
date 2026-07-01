@@ -285,7 +285,6 @@ function selesaiDanCetak(){
         </div>
 
        <div class="info">
-            <div>NO TRANSAKSI : ${noTransaksi}</div>
             <div>KASIR : ${namaKasir}</div>
             <div>TANGGAL : ${waktu.toLocaleDateString("id-ID", {
                 day: "2-digit",
