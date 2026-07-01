@@ -280,8 +280,8 @@ function selesaiDanCetak(){
         <h2>TOKO KHOZ</h2>
 
         <div class="alamat">
-            Jl. Jatiwayang<br>
-            Pacitan, Ngunut<br>
+            Jl. Jatiwayang, Pacitan<br>
+            Ngunut<br>
         </div>
 
        <div class="info">
